@@ -20,7 +20,7 @@ class Controller {
           exclude: ['createdAt', 'updatedAt']
         }
       });
-      res.status(200).json({ result: result, name: req.user.name });
+      res.status(200).json({ result: result, name: req.user.name, email: req.user.email });
     } catch (err) {
       next(err);
     }
